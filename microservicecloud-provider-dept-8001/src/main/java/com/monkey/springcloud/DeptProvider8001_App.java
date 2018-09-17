@@ -2,6 +2,7 @@ package com.monkey.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * 服务启动类
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date: 2018/9/17 11:33
  */
 @SpringBootApplication
+@EnableEurekaClient //本服务启动后会自动注册进eureka服务中
 public class DeptProvider8001_App {
 
     public static void main(String[] args) {
