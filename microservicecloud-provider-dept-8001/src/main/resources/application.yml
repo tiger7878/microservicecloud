@@ -27,3 +27,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka #Eureka服务端的地址
+  instance:
+    instance-id: microservicecloud-dept8001 #本服务在Eureka中的默认名字修改
+    prefer-ip-address: true #访问路径可以显示IP地址
+
+#配置Eureka中服务点击以后查看info的信息
+info:
+  app.name: monkey-microservicecloud
+  company.name: www.monkey.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
