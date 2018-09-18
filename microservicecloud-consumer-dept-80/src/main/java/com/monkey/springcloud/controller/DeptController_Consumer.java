@@ -38,4 +38,10 @@ public class DeptController_Consumer {
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list",List.class);
     }
 
+    //对外暴露查询所有的微服务
+    @RequestMapping(value = "/discovery",method = RequestMethod.GET)
+    public Object discovery(){
+        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/discovery",Object.class);
+    }
+
 }
