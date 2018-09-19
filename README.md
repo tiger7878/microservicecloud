@@ -13,7 +13,7 @@ http://eureka7003.com:7003/<br />
 ## 测试：
 http://localhost/consumer/dept/get/3 <br />
 
-# 一个微服务，多个实例，即多个provider
+# 2018-9-19 22:51:15 一个微服务，多个实例，即多个provider
 ## ①创建两个数据库：
 cloudDB02、cloudDB03（参考cloudDB01的脚本） 
 ## ②创建两个项目：
