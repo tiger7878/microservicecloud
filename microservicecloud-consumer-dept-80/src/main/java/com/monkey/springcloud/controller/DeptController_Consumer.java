@@ -19,7 +19,9 @@ import java.util.List;
 @RequestMapping("/consumer/dept")
 public class DeptController_Consumer {
 
-    public static final String REST_URL_PREFIX = "http://localhost:8001";
+//    public static final String REST_URL_PREFIX = "http://localhost:8001";//没有使用ribbon时的做法
+    public static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";//使用ribbon的做法，用某个微服务的名字
+
     @Autowired
     private RestTemplate restTemplate;
 
