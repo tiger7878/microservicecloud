@@ -26,3 +26,7 @@ instance-id 需要修改
 ## 测试：
 http://eureka7001.com:7001/ #查看一个微服务有几个实例 <br />
 http://localhost/consumer/dept/list #看数据
+
+# 2018-9-22 12:49:27 Feign负载均衡
+## 测试：
+http://localhost/consumer/dept/list
