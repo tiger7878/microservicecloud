@@ -23,11 +23,11 @@ public class ConfigBean {
         return new RestTemplate();
     }
 
-    @Bean
+    /*@Bean
     public IRule iRule(){
         //指定Ribbon的算法，替代默认的轮询算法
 //        return new RandomRule();//随机算法
         return new RetryRule();//重试
-    }
+    }*/
 
 }
