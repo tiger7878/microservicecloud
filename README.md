@@ -30,3 +30,9 @@ http://localhost/consumer/dept/list #看数据
 # 2018-9-22 12:49:27 Feign负载均衡
 ## 测试：
 http://localhost/consumer/dept/list
+
+#2018-9-25 06:50:31 Hystrix-服务熔断
+## 测试：
+http://eureka7001.com:7001/ #查看Eureka中服务的名称  <br />
+http://localhost/consumer/dept/get/1 #正常 <br />
+http://localhost/consumer/dept/get/200 #异常，调用熔断器中的方法
