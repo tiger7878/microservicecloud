@@ -19,3 +19,11 @@ info:
   company.name: www.monkey.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
+#Zuul配置
+zuul:
+  prefix: /monkey #访问路径统一的前缀，可以不写
+  ignored-services: "*" #禁止访问真实微服务名称，否则虚拟的路径和真实服务的路径都可以访问
+  routes:
+    mydept.serviceId: microservicecloud-dept #需要被替代的微服务的名称
+    mydept.path: /mydept/**  #用虚拟的名称来代替真实的微服务的名称

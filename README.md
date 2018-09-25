@@ -62,3 +62,9 @@ microservicecloud-eureka-7001、microservicecloud-eureka-7002、microserviceclou
 http://eureka7001.com:7001/ #查看Eureka中服务的名称  <br />
 http://localhost:8001/dept/get/2 #查看不用路由的情况 <br />
 http://myzuul.com:9527/microservicecloud-dept/dept/get/2 #使用路由的情况访问
+
+# 2018-9-25 22:37:28 Zuul路由访问映射规则
+## 开启服务：
+microservicecloud-eureka-7001、microservicecloud-eureka-7002、microservicecloud-eureka-7003、microservicecloud-provider-dept-8001、microservicecloud-zuul-gateway-9527
+## 测试：
+http://myzuul.com:9527/monkey/mydept/dept/get/4 #查看服务是否正常
