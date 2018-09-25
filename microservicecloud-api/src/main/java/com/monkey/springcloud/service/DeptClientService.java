@@ -14,7 +14,8 @@ import java.util.List;
  * @author: monkey
  * @date: 2018/9/22 12:17
  */
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+//@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)//添加服务熔断工厂
 public interface DeptClientService {
 
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)

@@ -31,8 +31,16 @@ http://localhost/consumer/dept/list #看数据
 ## 测试：
 http://localhost/consumer/dept/list
 
-#2018-9-25 06:50:31 Hystrix-服务熔断
+# 2018-9-25 06:50:31 Hystrix-服务熔断
 ## 测试：
 http://eureka7001.com:7001/ #查看Eureka中服务的名称  <br />
 http://localhost/consumer/dept/get/1 #正常 <br />
 http://localhost/consumer/dept/get/200 #异常，调用熔断器中的方法
+
+# 2018-9-25 20:31:57 Hystrix-服务降级
+## 测试：
+### 开启服务：microservicecloud-eureka-7001、microservicecloud-eureka-7002、microservicecloud-eureka-7003、microservicecloud-provider-dept-8001
+http://eureka7001.com:7001/ #查看Eureka中服务的名称  <br />
+http://localhost/consumer/dept/get/1 #正常 <br />
+### 此时停止服务提供者 microservicecloud-provider-dept-8001
+http://localhost/consumer/dept/get/2 #服务停止时，调用熔断器工厂中的方法
