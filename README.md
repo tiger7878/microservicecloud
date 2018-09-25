@@ -44,3 +44,10 @@ http://eureka7001.com:7001/ #查看Eureka中服务的名称  <br />
 http://localhost/consumer/dept/get/1 #正常 <br />
 ### 此时停止服务提供者 microservicecloud-provider-dept-8001
 http://localhost/consumer/dept/get/2 #服务停止时，调用熔断器工厂中的方法
+
+# 2018-9-25 21:33:00 Hystrix-Dashboard监控Hystrix服务
+## 测试：
+### 开启服务：microservicecloud-eureka-7001、microservicecloud-eureka-7002、microservicecloud-eureka-7003、microservicecloud-provider-dept-hystrix-8001、microservicecloud-consumer-hystrix-dashboard
+http://localhost:9001/hystrix #添加监控的服务 <br />
+http://localhost:8001/hystrix.stream ，Delay：2000，Title：demo01 <br />
+http://localhost:8001/dept/get/2 #不停刷新这个界面，然后看监控页面的信息
