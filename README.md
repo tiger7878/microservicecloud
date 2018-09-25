@@ -51,3 +51,14 @@ http://localhost/consumer/dept/get/2 #服务停止时，调用熔断器工厂中
 http://localhost:9001/hystrix #添加监控的服务 <br />
 http://localhost:8001/hystrix.stream ，Delay：2000，Title：demo01 <br />
 http://localhost:8001/dept/get/2 #不停刷新这个界面，然后看监控页面的信息
+
+# 2018-9-25 22:11:44 Zuul网关
+## 修改host文件：C:\Windows\System32\drivers\etc添加以下内容
+#SpringCloud的Zuurl网关配置 <br />
+127.0.0.1	myzuul.com
+## 开启服务：
+microservicecloud-eureka-7001、microservicecloud-eureka-7002、microservicecloud-eureka-7003、microservicecloud-provider-dept-8001、microservicecloud-zuul-gateway-9527
+## 测试：
+http://eureka7001.com:7001/ #查看Eureka中服务的名称  <br />
+http://localhost:8001/dept/get/2 #查看不用路由的情况 <br />
+http://myzuul.com:9527/microservicecloud-dept/dept/get/2 #使用路由的情况访问
