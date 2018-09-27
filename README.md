@@ -68,3 +68,15 @@ http://myzuul.com:9527/microservicecloud-dept/dept/get/2 #使用路由的情况�
 microservicecloud-eureka-7001、microservicecloud-eureka-7002、microservicecloud-eureka-7003、microservicecloud-provider-dept-8001、microservicecloud-zuul-gateway-9527
 ## 测试：
 http://myzuul.com:9527/monkey/mydept/dept/get/4 #查看服务是否正常
+
+# 2018-9-27 22:14:03 Config统一配置中心-基础配置
+## 在GitHub中创建一个项目：microservicecloud-config、然后获取到本地，然后创建一个application.yml提交到GitHub中
+## 修改host文件：C:\Windows\System32\drivers\etc添加以下内容
+#SpringCloud的Config网关配置 <br />
+127.0.0.1	config-3344.com
+## 开启服务：
+microservicecloud-config-3344
+## 测试：
+http://config-3344.com:3344/application-dev.yml <br />
+http://config-3344.com:3344/application-test.yml <br />
+http://config-3344.com:3344/application-abc.yml
