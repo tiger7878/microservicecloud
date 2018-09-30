@@ -80,3 +80,11 @@ microservicecloud-config-3344
 http://config-3344.com:3344/application-dev.yml <br />
 http://config-3344.com:3344/application-test.yml <br />
 http://config-3344.com:3344/application-abc.yml
+
+# 2018-9-30 21:01:12 Config客户端连接-Config服务端-配置文件在GitHub
+## 开启服务：
+microservicecloud-config-3344 <br />
+microservicecloud-config-client-3355
+## 测试(修改bootstrap.yml切换环境)
+http://localhost:8201/config <br />
+http://localhost:8202/config
