@@ -88,3 +88,12 @@ microservicecloud-config-client-3355
 ## 测试(修改bootstrap.yml切换环境)
 http://localhost:8201/config <br />
 http://localhost:8202/config
+
+# 2018-10-3 10:33:54 Config统一配置-Eureka Server和dept服务提供者
+## 开启：
+microservicecloud-config-3344 <br/>
+microservicecloud-config-eureka-client-7001 <br/>
+microservicecloud-config-dept-client-8001
+## 测试：
+http://eureka7001.com:7001/ #查看Eureka中的服务 <br/>
+http://localhost:8001/dept/list #查看修改配置文件后的结果
