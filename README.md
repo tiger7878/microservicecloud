@@ -97,3 +97,10 @@ microservicecloud-config-dept-client-8001
 ## 测试：
 http://eureka7001.com:7001/ #查看Eureka中的服务 <br/>
 http://localhost:8001/dept/list #查看修改配置文件后的结果
+
+# 2018-10-3 15:05:25 新增maven发布jar包到nexus私服中
+## 注意：
+先在本地maven仓库的settings.xml中配置私服的账号和密码相关信息 <br/>
+然后再项目的pom.xml配置私服发布的地址和名称 <br/>
+最后在开发工具中执行deploy命令发布到nexus <br/>
+maven会判断版本后面是否带了-SNAPSHOT，如果带了就发布到snapshots仓库，否则发布到release仓库

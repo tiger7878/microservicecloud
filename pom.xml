@@ -6,6 +6,7 @@
 
     <groupId>com.monkey.springcloud</groupId>
     <artifactId>microservicecloud</artifactId>
+    <!--maven会判断版本后面是否带了-SNAPSHOT，如果带了就发布到snapshots仓库，否则发布到release仓库-->
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>microservicecloud-api</module>
@@ -85,6 +86,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!-- 上传到私服的配置，通常配置在父工程中就好，用到deploy命令才上传，不是install -->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <!--配置Eureka中服务点击以后查看info的信息-->
     <build>
